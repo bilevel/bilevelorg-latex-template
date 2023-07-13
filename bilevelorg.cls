@@ -51,7 +51,8 @@
     \textcolor{tertiary}{\fontsize{11}{16}\fontseries{b}\fontfamily{qhv}\selectfont\@proposal} 
     %\\[-4pt]%
     \hfill %
-    \textcolor{primary}{\fontsize{11}{16}\fontfamily{qhv}\selectfont\@institution} \\%
+    \textcolor{primary}{\fontsize{11}{16}\fontfamily{qhv}\selectfont%
+        Date: \@date} \\%
     %%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%
@@ -66,13 +67,17 @@
     \parbox{0.85\linewidth}{%
         \begin{flushleft}
         \color{primary}%
-        \fontsize{12}{16}\selectfont\@author%
+        \fontsize{12}{16}\selectfont\@author
         \end{flushleft}
     }
     $\cdot$
     %\textcolor{tertiary}{\@date}
-    \\[18pt]
+    %\\[8pt]
 }]
+\begin{flushleft}
+    \fontsize{10}{0}\selectfont%
+    \@institution
+\end{flushleft}
 }
 
 
@@ -112,7 +117,7 @@
 \fancyfoot[C]{\color{primary}\fontsize{10}{16}\fontfamily{qhv}\selectfont%
 \bfseries\MakeUppercase\thepage}
 \fancyfoot[L]{\color{primary}\fontsize{10}{16}\fontfamily{qhv}\selectfont%
-\bfseries\MakeUppercase \@proposal}
+\bfseries \@proposal}
 % remove header line
 \renewcommand{\headrulewidth}{0pt}
 
@@ -148,8 +153,8 @@
 
 % biblatex size
 
-\proposal{Date: \@date}
-\institution{%
+\proposal{%
 bi-level.org
 }
+\institution{}
 
